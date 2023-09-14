@@ -6,7 +6,7 @@ const Cart = (props) => {
     (item) => <li key={item.id}>{item.name}</li>
   );
   return (
-    <Modal>
+    <Modal onCloseModal={props.onHideCart}>
       <ul className={classes["cart-items"]}>{cartItems}</ul>
       <div className={classes.total}>
         <span>Total Amount: </span>
